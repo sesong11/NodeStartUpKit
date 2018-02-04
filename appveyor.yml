@@ -14,7 +14,7 @@ install:
 # Post-install test scripts.
 test_script:
   # Output useful info for debugging.
-  - node --veriosn
+  - node --version
   - npm --version
   # run test
   - run test
