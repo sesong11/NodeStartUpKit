@@ -15,7 +15,6 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
-    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-cli": "6.16.0",
@@ -50,6 +49,7 @@
     "webpack": "1.13.2",
     "webpack-dev-middleware": "1.8.4",
     "webpack-hot-middleware": "2.13.0",
-    "webpack-md5-hash": "0.0.5"
+    "webpack-md5-hash": "0.0.5",
+    "whatwg-fetch": "^2.0.3"
   }
 }
