@@ -4,7 +4,7 @@ export default function getBaseUrl() {
 
 function getQueryStringParameterByName(name, url) {
   if (!url) url = window.location.href;
-  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]"); // eslint-disable-line no-useless-escape
   var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
     results = regex.exec(location.search);
   return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));

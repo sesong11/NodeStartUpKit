@@ -29,8 +29,8 @@ app.get('/users', function(req, res) {
 
 app.listen(port, function(err) {
   if (err) {
-    console.log(err);
+    console.log(err); // eslint-disable-line no-console
   } else {
-    console.log('Application start on port: ' + port);
+    console.log('Application start on port: ' + port); // eslint-disable-line no-console
   }
 });

@@ -7,14 +7,15 @@
   ],
   "parserOptions": {
     "ecmaVersion": 7,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
   },
   "env": {
     "browser": true,
     "node": true,
     "mocha": true
   },
-  "rules": {
-    "no-console": 1
-  }
+  "parser": "babel-eslint"
 }
