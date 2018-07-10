@@ -2,17 +2,23 @@
 import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {getUsers, deleteUser} from './api/userApi';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import AppBar from 'material-ui/AppBar';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import PropTypes from 'prop-types';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import MiniDrawer from './components/minidrawer'
+
 class DrawerSimpleExample extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {open: false};
+    this.state = {
+      open: false,
+      data: [],
+    };
   }
 
   handleToggle = () => this.setState({open: !this.state.open}); 
@@ -20,15 +26,8 @@ class DrawerSimpleExample extends React.Component {
   render() {
     return (
       <div>
-        <RaisedButton
-          label="Toggle Drawer"
-          onClick={this.handleToggle}
-        />
-        <Drawer open={this.state.open}>
-          <AppBar title="AppBar" onLeftIconButtonClick={this.handleToggle}/>
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
-        </Drawer>
+        <CssBaseline />
+        <MiniDrawer />
       </div>
     );
   }
